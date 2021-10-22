@@ -4,9 +4,11 @@
   "description": "capture data from your instagram posts",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve"
   },
   "author": "Aidan Loten",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
 }

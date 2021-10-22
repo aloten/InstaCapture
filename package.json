@@ -2,13 +2,10 @@
   "name": "instacapture",
   "version": "1.0.0",
   "description": "capture data from your instagram posts",
-  "main": "index.js",
   "scripts": {
     "start": "serve"
   },
   "author": "Aidan Loten",
   "license": "ISC",
-  "dependencies": {
-    "serve": "^11.3.2"
-  }
+  "dependencies": {}
 }

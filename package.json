@@ -7,5 +7,7 @@
   },
   "author": "Aidan Loten",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "serve": "^11.3.2"
+  }
 }

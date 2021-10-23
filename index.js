@@ -3,8 +3,10 @@ window.fbAsyncInit = function () {
     appId: '404888344473042',
     cookie: true,
     xfbml: true,
-    version: 'v2.7',
+    version: 'v12.0',
   });
+
+  FB.AppEvents.logPageView();
 
   FB.getLoginStatus(function (response) {
     statusChangeCallback(response);

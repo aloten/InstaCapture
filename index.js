@@ -45,10 +45,12 @@ function checkLoginState() {
 function setElements(isLoggedIn) {
   if (isLoggedIn) {
     document.querySelector('.profile').style.display = 'block';
+    document.querySelector('.profile-heading').style.display = 'none';
     document.querySelector('.fb-btn').style.display = 'none';
     document.querySelector('.logout').style.display = 'block';
   } else {
     document.querySelector('.profile').style.display = 'none';
+    document.querySelector('.profile-heading').style.display = 'block';
     document.querySelector('.fb-btn').style.display = 'block';
     document.querySelector('.logout').style.display = 'none';
   }

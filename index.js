@@ -29,6 +29,7 @@ function statusChangeCallback(response) {
   if (response.status === 'connected') {
     setElements(true);
     console.log('Logged in and authenticated');
+    testAPI();
   } else {
     setElements(false);
     console.log('Not authenticated');
@@ -40,6 +41,35 @@ function checkLoginState() {
   FB.getLoginStatus(function (response) {
     statusChangeCallback(response);
   });
+}
+
+function testAPI() {
+  FB.api('/me?fields=name,email,birthday', function (response) {
+    if (response && !response.error) {
+      // console.log(response);
+      buildProfile(response);
+    }
+  });
+}
+
+function buildProfile(user) {
+  const profile = document.createElement('div');
+  const name = document.createElement('h3');
+  const profileAttributes = document.createElement('ul');
+  const email = document.createElement('li');
+  const birthday = document.createElement('li');
+  const userID = document.createElement('li');
+
+  name.textContent = user.name;
+  email.textContent = user.email;
+  birthday.textContent = user.birthday;
+  userID.textContent = user.id;
+
+  profile.appendChild(name);
+  profileAttributes.appendChild(email);
+  profileAttributes.appendChild(birthday);
+  profileAttributes.appendChild(userID);
+  profile.appendChild(profileAttributes);
 }
 
 function setElements(isLoggedIn) {

@@ -8,13 +8,16 @@
     <title>InstaCapture</title>
   </head>
   <body>
-    <a class="logout" href="#" onclick="logout()">Logout</a>
-    <fb:login-button
-      class="fb-btn"
-      scope="public_profile,email,user_birthday"
-      onlogin="checkLoginState();"
-    >
-    </fb:login-button>
+    <nav class="nav">
+      <h1>InstaCapture</h1>
+      <a class="logout" href="#" onclick="logout()">Logout</a>
+      <fb:login-button
+        class="fb-btn"
+        scope="public_profile,email,user_birthday"
+        onlogin="checkLoginState();"
+      >
+      </fb:login-button>
+    </nav>
 
     <div class="container">
       <h3 class="profile-heading">Log in to view your profile</h3>

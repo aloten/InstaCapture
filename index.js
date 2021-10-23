@@ -3,7 +3,7 @@ window.fbAsyncInit = function () {
     appId: '404888344473042',
     cookie: true,
     xfbml: true,
-    version: 'v12.0',
+    version: 'v2.7',
   });
 
   FB.getLoginStatus(function (response) {

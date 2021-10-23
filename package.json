@@ -1,13 +1,14 @@
 {
-  "name": "instacapture",
-  "version": "1.0.0",
-  "description": "capture data from your instagram posts",
-  "scripts": {
-    "start": "serve"
-  },
-  "author": "Aidan Loten",
-  "license": "ISC",
-  "dependencies": {
-    "serve": "^11.3.2"
-  }
+    "name": "My_Beautiful_Project",
+    "author": "Rui Coelho",
+    "version": "0.0.1",
+    "description": "My beautiful static page project",
+    "scripts": {
+        "start": "serve",
+        "dev": "reload"
+    },
+    "dependencies": {
+        "reload": "^3.1.1",
+        "serve": "^11.3.2"
+    }
 }

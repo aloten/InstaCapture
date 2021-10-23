@@ -4,56 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>InstaCapture</title>
   </head>
   <body>
-    <div class="postsDis"><h1>Posts</h1></div>
-
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: '404888344473042',
-          cookie: true,
-          xfbml: true,
-          version: 'v12.0',
-        });
-
-        FB.getLoginStatus(function (response) {
-          statusChangeCallback(response);
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {
-          return;
-        }
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'facebook-jssdk');
-
-      function statusChangeCallback(response) {
-        if (response.status === 'connected') {
-          console.log('Logged in and authenticated');
-        } else {
-          console.log(response);
-        }
-      }
-
-      function checkLoginState() {
-        FB.getLoginStatus(function (response) {
-          statusChangeCallback(response);
-        });
-      }
-    </script>
-    Facebook Login should be here:
+    <a class="logout" href="#" onclick="logout()">Logout</a>
     <fb:login-button
+      class="fb-btn"
       scope="public_profile,email,user_birthday"
       onlogin="checkLoginState();"
     >
     </fb:login-button>
+
+    <div class="container">
+      <h3 class="heading">Log in to view your profile</h3>
+      <div class="profile"></div>
+    </div>
+
+    <script src="index.js" defer></script>
   </body>
 </html>

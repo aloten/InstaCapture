@@ -31,6 +31,7 @@ function statusChangeCallback(response) {
     console.log('Logged in and authenticated');
   } else {
     setElements(false);
+    console.log('Not authenticated');
     console.log(response);
   }
 }

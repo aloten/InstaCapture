@@ -46,14 +46,14 @@ function checkLoginState() {
 function testAPI() {
   FB.api('/me?fields=name,email,birthday', function (response) {
     if (response && !response.error) {
-      // console.log(response);
+      console.log(response);
       buildProfile(response);
     }
   });
 }
 
 function buildProfile(user) {
-  const profile = document.createElement('div');
+  const profile = document.querySelector('.profile');
   const name = document.createElement('h3');
   const profileAttributes = document.createElement('ul');
   const email = document.createElement('li');
@@ -70,6 +70,8 @@ function buildProfile(user) {
   profileAttributes.appendChild(birthday);
   profileAttributes.appendChild(userID);
   profile.appendChild(profileAttributes);
+
+  console.log(profile);
 }
 
 function setElements(isLoggedIn) {

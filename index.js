@@ -87,7 +87,7 @@ function buildProfile(user) {
 }
 
 function buildPosts(posts) {
-  let output = '<h3>Latest Posts</h3>';
+  let output = '<h3>Latest Personal Posts</h3>';
   for (let i in posts.data) {
     if (posts.data[i].message) {
       output += `

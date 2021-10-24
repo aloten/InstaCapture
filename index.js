@@ -44,34 +44,61 @@ function checkLoginState() {
 }
 
 function testAPI() {
-  FB.api('/me?fields=name,email,birthday', function (response) {
+  FB.api('/me?fields=name,email,birthday,posts', function (response) {
     if (response && !response.error) {
-      console.log(response);
       buildProfile(response);
     }
+
+    FB.api('/me/posts', function (response) {
+      if (response && !response.error) {
+        buildPosts(response);
+      }
+    });
   });
 }
 
 function buildProfile(user) {
   const profile = document.querySelector('.profile');
+
   const name = document.createElement('h3');
   const profileAttributes = document.createElement('ul');
+  const userID = document.createElement('li');
   const email = document.createElement('li');
   const birthday = document.createElement('li');
-  const userID = document.createElement('li');
 
   name.textContent = user.name;
-  email.textContent = user.email;
-  birthday.textContent = user.birthday;
-  userID.textContent = user.id;
+  userID.textContent = `User ID: ${user.id}`;
+  email.textContent = `Email: ${user.email}`;
+  birthday.textContent = `Birthday: ${user.birthday}`;
+
+  profileAttributes.setAttribute('class', 'attr-list');
+  name.setAttribute('class', 'profile-name');
+  userID.setAttribute('class', 'attr');
+  email.setAttribute('class', 'attr');
+  birthday.setAttribute('class', 'attr');
 
   profile.appendChild(name);
+  profileAttributes.appendChild(userID);
   profileAttributes.appendChild(email);
   profileAttributes.appendChild(birthday);
-  profileAttributes.appendChild(userID);
   profile.appendChild(profileAttributes);
 
   console.log(profile);
+}
+
+function buildPosts(posts) {
+  let output = '<h3>Latest Posts</h3>';
+  for (let i in posts.data) {
+    if (posts.data[i].message) {
+      output += `
+      <div class="post">
+        ${posts.data[i].message} <span>${posts.data[i].created_time}</span>
+      </div>
+      `;
+    }
+  }
+
+  document.querySelector('.posts').innerHTML = output;
 }
 
 function setElements(isLoggedIn) {
@@ -80,11 +107,13 @@ function setElements(isLoggedIn) {
     document.querySelector('.profile-heading').style.display = 'none';
     document.querySelector('.fb-btn').style.display = 'none';
     document.querySelector('.logout').style.display = 'block';
+    document.querySelector('.posts').style.display = 'block';
   } else {
     document.querySelector('.profile').style.display = 'none';
     document.querySelector('.profile-heading').style.display = 'block';
     document.querySelector('.fb-btn').style.display = 'block';
     document.querySelector('.logout').style.display = 'none';
+    document.querySelector('.posts').style.display = 'none';
   }
 }
 

@@ -5,22 +5,26 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
 }
 
 /* Navbar */
 .nav {
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #4d73c4;
   color: white;
-}
-
-.profile {
-  display: none;
 }
 
 .logout {
@@ -30,4 +34,46 @@ a {
 
 .logout:hover {
   color: salmon;
+}
+
+/* Main content */
+.main-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+}
+
+/* Profile */
+.profile {
+  display: none;
+  width: 20rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.profile-name {
+  margin: 1rem;
+}
+
+.attr {
+  padding: 0.5rem;
+  border-top: 1px solid black;
+}
+
+/* Posts */
+.posts {
+  display: none;
+  margin: 2rem 0;
+}
+
+.post {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 3px;
+  background-color: white;
 }

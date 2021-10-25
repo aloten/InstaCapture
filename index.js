@@ -104,16 +104,16 @@ function buildPosts(posts) {
 function setElements(isLoggedIn) {
   if (isLoggedIn) {
     document.querySelector('.profile').style.display = 'block';
-    document.querySelector('.profile-heading').style.display = 'none';
     document.querySelector('.fb-btn').style.display = 'none';
     document.querySelector('.logout').style.display = 'block';
     document.querySelector('.posts').style.display = 'block';
+    document.querySelector('.pre-login-content').style.display = 'none';
   } else {
     document.querySelector('.profile').style.display = 'none';
-    document.querySelector('.profile-heading').style.display = 'block';
     document.querySelector('.fb-btn').style.display = 'block';
     document.querySelector('.logout').style.display = 'none';
     document.querySelector('.posts').style.display = 'none';
+    document.querySelector('.pre-login-content').style.display = 'block';
   }
 }
 

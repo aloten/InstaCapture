@@ -8,26 +8,55 @@
     <title>InstaCapture</title>
   </head>
   <body>
-    <nav class="nav">
-      <a href="index.html"><h1>InstaCapture</h1></a>
-      <div class="links">
-        <a class="logout" href="#" onclick="logout()">Logout</a>
-        <fb:login-button
-          class="fb-btn"
-          scope="public_profile,email,user_birthday,user_posts,pages_read_user_content"
-          onlogin="checkLoginState();"
-        >
-        </fb:login-button>
-        <a href="privacy.html">Privacy Policy</a>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html"><h1>InstaCapture</h1></a>
+        <div class="links">
+          <a class="logout" href="#" onclick="logout()">Logout</a>
+          <fb:login-button
+            class="fb-btn"
+            scope="public_profile,email,user_birthday,user_posts,pages_read_user_content"
+            onlogin="checkLoginState();"
+          >
+          </fb:login-button>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </nav>
+
+      <div class="main-content">
+        <div class="pre-login-content">
+          <div class="login-banner">Log in to view your profile</div>
+          <h3>User</h3>
+          <div class="profile-template"></div>
+          <h3>Latest Personal Posts</h3>
+          <div class="posts-template">
+            <div class="post-template">
+              <div class="head-bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="post-template">
+              <div class="head-bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="post-template">
+              <div class="head-bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="profile"></div>
+        <div class="posts"></div>
       </div>
-    </nav>
-
-    <div class="main-content">
-      <h3 class="profile-heading">Log in to view your profile</h3>
-      <div class="profile"></div>
-      <div class="posts"></div>
+      <footer class="footer">
+        <div>
+          <h4>InstaCapture, Aidan Loten</h4>
+          <p>Copyright &copy; 2021</p>
+        </div>
+      </footer>
     </div>
-
     <script src="index.js" defer></script>
   </body>
 </html>

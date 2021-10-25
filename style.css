@@ -88,6 +88,9 @@ a {
 /* Profile */
 .profile {
   display: none;
+}
+
+.profile-content {
   margin-top: 1rem;
   width: 20rem;
   background-color: white;

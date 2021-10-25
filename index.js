@@ -58,7 +58,7 @@ function testAPI() {
 }
 
 function buildProfile(user) {
-  const profile = document.querySelector('.profile');
+  const profileContent = document.querySelector('.profile-content');
 
   const name = document.createElement('h3');
   const profileAttributes = document.createElement('ul');
@@ -77,13 +77,13 @@ function buildProfile(user) {
   email.setAttribute('class', 'attr');
   birthday.setAttribute('class', 'attr');
 
-  profile.appendChild(name);
+  profileContent.appendChild(name);
   profileAttributes.appendChild(userID);
   profileAttributes.appendChild(email);
   profileAttributes.appendChild(birthday);
-  profile.appendChild(profileAttributes);
+  profileContent.appendChild(profileAttributes);
 
-  console.log(profile);
+  console.log(profileContent);
 }
 
 function buildPosts(posts) {

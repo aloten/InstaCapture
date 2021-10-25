@@ -1,5 +1,5 @@
 {
-  "name": "InstaCapture",
+  "name": "insta-capture",
   "author": "Aidan Loten",
   "version": "0.0.1",
   "description": "Implements Facebook Login and uses FB Graph API",

@@ -125,6 +125,9 @@ function handleLimitedData() {
   document.querySelector('.posts').innerHTML = output;
 }
 
+// Run automatically because I need verified account status first to get users' non-public data
+handleLimitedData();
+
 function logout() {
   FB.logout(function (response) {
     setElements(false);

@@ -1,2 +1,1 @@
-# heroku_static_pages
-Deployment of Heroku Static Pages.
+Gets posts and comments of Instagram/FB business account using Facebook's Graph Api and Instagram's Graph Api

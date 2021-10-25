@@ -9,14 +9,17 @@
   </head>
   <body>
     <nav class="nav">
-      <h1>InstaCapture</h1>
-      <a class="logout" href="#" onclick="logout()">Logout</a>
-      <fb:login-button
-        class="fb-btn"
-        scope="public_profile,email,user_birthday,user_posts,pages_read_user_content"
-        onlogin="checkLoginState();"
-      >
-      </fb:login-button>
+      <a href="index.html"><h1>InstaCapture</h1></a>
+      <div class="links">
+        <a class="logout" href="#" onclick="logout()">Logout</a>
+        <fb:login-button
+          class="fb-btn"
+          scope="public_profile,email,user_birthday,user_posts,pages_read_user_content"
+          onlogin="checkLoginState();"
+        >
+        </fb:login-button>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
     </nav>
 
     <div class="main-content">

@@ -27,6 +27,22 @@ a {
   color: white;
 }
 
+.nav a {
+  color: white;
+}
+
+.nav a:hover {
+  color: salmon;
+}
+
+.links {
+  display: flex;
+}
+
+.fb-btn {
+  margin-right: 2rem;
+}
+
 .logout {
   display: none;
   color: white;

@@ -28,12 +28,12 @@ window.fbAsyncInit = function () {
 function statusChangeCallback(response) {
   if (response.status === 'connected') {
     setElements(true);
-    console.log('Logged in and authenticated');
+    // console.log('Logged in and authenticated');
     testAPI();
   } else {
     setElements(false);
-    console.log('Not authenticated');
-    console.log(response);
+    // console.log('Not authenticated');
+    // console.log(response);
   }
 }
 
@@ -44,7 +44,7 @@ function checkLoginState() {
 }
 
 function testAPI() {
-  FB.api('/me?fields=name,email,birthday,posts', function (response) {
+  FB.api('/me?fields=name,email,birthday', function (response) {
     if (response && !response.error) {
       buildProfile(response);
     }
@@ -52,6 +52,8 @@ function testAPI() {
     FB.api('/me/posts', function (response) {
       if (response && !response.error) {
         buildPosts(response);
+      } else {
+        handleLimitedData();
       }
     });
   });
@@ -115,6 +117,11 @@ function setElements(isLoggedIn) {
     document.querySelector('.posts').style.display = 'none';
     document.querySelector('.pre-login-content').style.display = 'block';
   }
+}
+
+function handleLimitedData() {
+  const output = "Sorry! Facebook won't let me access your posts.";
+  document.querySelector('.posts').innerHTML = output;
 }
 
 function logout() {

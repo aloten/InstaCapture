@@ -82,13 +82,13 @@ a {
   display: flex;
   flex-direction: column;
   align-items: left;
-  justify-content: space-between;
   background-color: #f7f7f7;
 }
 
 /* Profile */
 .profile {
   display: none;
+  margin-top: 1rem;
   width: 20rem;
   background-color: white;
   border: 1px solid black;
@@ -112,6 +112,7 @@ a {
 
 .post {
   margin: 1rem 0;
+  padding: 0.5rem;
   border: 1px solid black;
   border-radius: 3px;
   background-color: white;

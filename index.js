@@ -120,7 +120,8 @@ function setElements(isLoggedIn) {
 }
 
 function handleLimitedData() {
-  const output = "Sorry! Facebook won't let me access your posts.";
+  const output =
+    "Sorry! Facebook won't let me access your posts because I'm not a verified business.";
   document.querySelector('.posts').innerHTML = output;
 }
 
